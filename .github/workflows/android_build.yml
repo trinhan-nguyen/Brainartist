@@ -8,15 +8,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-      - name: Set Up JDK
+      - name: Set up JDK
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
 
-      - name: Run Tests
+      - name: Cache Gradle packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
+
+      - name: Run tests
         run: ./gradlew test
 
-      - name: Build Project
+      - name: Build project
         run: ./gradlew assemble
