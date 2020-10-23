@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Brainartist</string>
+    <string name="home_button_start_game">Start Game</string>
+    <string name="home_button_high_scores">High Scores</string>
+    <string name="home_text_view_memorize_cards_game">Memorize cards</string>
 </resources>
