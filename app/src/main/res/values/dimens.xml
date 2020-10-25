@@ -8,8 +8,4 @@
 
     <!--    icons and images size-->
     <dimen name="home_game_card_height">260dp</dimen>
-
-    <!--    texts size-->
-    <dimen name="text_small">14sp</dimen>
-    <dimen name="text_medium">18sp</dimen>
 </resources>
