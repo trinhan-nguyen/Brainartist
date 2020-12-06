@@ -6,20 +6,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".GameFragment">
+        tools:context=".CardFragment">
 
         <TextView
+            android:id="@+id/card_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textAppearance="?attr/textAppearanceHeadline3"
-            android:text="@string/app_name" />
+            tools:text="@string/app_name" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/next_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/home_button_start_game"
+            android:text="@string/card_button_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />

@@ -15,5 +15,13 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.paw.brainartist.GameFragment"
-        android:label="GameFragment" />
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.paw.brainartist.CardFragment"
+        android:label="CardFragment" />
 </navigation>
