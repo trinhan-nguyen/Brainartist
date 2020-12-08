@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.paw.brainartist.HomeFragment"
+        android:name="com.paw.brainartist.view.home.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_gameFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.paw.brainartist.GameFragment"
+        android:name="com.paw.brainartist.view.game.GameFragment"
         android:label="GameFragment" >
         <action
             android:id="@+id/action_gameFragment_to_cardFragment"
@@ -22,6 +22,6 @@
     </fragment>
     <fragment
         android:id="@+id/cardFragment"
-        android:name="com.paw.brainartist.CardFragment"
+        android:name="com.paw.brainartist.view.card.CardFragment"
         android:label="CardFragment" />
 </navigation>

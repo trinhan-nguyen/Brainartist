@@ -1,4 +1,4 @@
-package com.paw.brainartist
+package com.paw.brainartist.view.card
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import com.paw.brainartist.R
 import com.paw.brainartist.databinding.FragmentCardBinding
-import com.paw.brainartist.databinding.FragmentGameBinding
 import com.paw.brainartist.models.CardDeck
 
 class CardFragment: Fragment() {
+
+    private val viewModel: CardViewModel by viewModels()
 
     private val NUM_OF_CARDS = 52
     private var currentCardIndex = 0

@@ -1,4 +1,4 @@
-package com.paw.brainartist
+package com.paw.brainartist.view.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.paw.brainartist.R
 import com.paw.brainartist.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {
