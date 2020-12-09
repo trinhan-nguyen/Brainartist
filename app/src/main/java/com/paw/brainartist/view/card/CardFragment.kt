@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.paw.brainartist.R
@@ -17,32 +18,23 @@ class CardFragment: Fragment() {
 
     private val viewModel: CardViewModel by viewModels()
 
-    private val NUM_OF_CARDS = 52
-    private var currentCardIndex = 0
-    private val cardDeck = CardDeck()
     private lateinit var binding: FragmentCardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_card, container, false)
 
         binding.nextButton.setOnClickListener {
-            if (currentCardIndex < NUM_OF_CARDS - 1) {
-                currentCardIndex++
-                updateCardContent()
-            }
+            viewModel.onNext()
         }
 
-        cardDeck.shuffle()
-        updateCardContent()
+        viewModel.card.observe(viewLifecycleOwner, Observer { card ->
+            binding.cardContent.text = card.toString()
+        })
 
         return binding.root
-    }
-
-    private fun updateCardContent() {
-        binding.cardContent.text = cardDeck.get(currentCardIndex).toString()
     }
 }
