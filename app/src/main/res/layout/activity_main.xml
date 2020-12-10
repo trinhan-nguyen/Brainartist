@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingStart="@dimen/margin_extra_large"
-    android:paddingEnd="@dimen/margin_extra_large"
-    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/game_image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:importantForAccessibility="no"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:scaleType="fitXY"
-        android:src="@drawable/brainartist_transparent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/start_game_button"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_button_start_game"
-        app:layout_constraintBottom_toTopOf="@id/high_scores_button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/high_scores_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_extra_large"
-        android:text="@string/home_button_high_scores"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation" />
+    </LinearLayout>
+</layout>
