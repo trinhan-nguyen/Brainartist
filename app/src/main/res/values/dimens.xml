@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--   margins-->
+    <dimen name="margin_extra_small">4dp</dimen>
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_large">32dp</dimen>
@@ -8,4 +9,10 @@
 
     <!--    icons and images size-->
     <dimen name="home_game_card_height">260dp</dimen>
+
+    <!--    elevation-->
+    <dimen name="elevation_standard">4dp</dimen>
+
+    <!--    playing card-->
+    <dimen name="card_corner_radius">20dp</dimen>
 </resources>
