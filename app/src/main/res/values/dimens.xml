@@ -10,9 +10,6 @@
     <!--    icons and images size-->
     <dimen name="home_game_card_height">260dp</dimen>
 
-    <!--    elevation-->
-    <dimen name="elevation_standard">4dp</dimen>
-
     <!--    playing card-->
-    <dimen name="card_corner_radius">20dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
 </resources>
