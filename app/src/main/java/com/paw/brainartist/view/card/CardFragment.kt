@@ -1,23 +1,18 @@
 package com.paw.brainartist.view.card
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.paw.brainartist.R
 import com.paw.brainartist.databinding.FragmentCardBinding
-import com.paw.brainartist.models.CardDeck
 
 class CardFragment: Fragment() {
-
     private val viewModel: CardViewModel by viewModels()
-
     private lateinit var binding: FragmentCardBinding
 
     override fun onCreateView(
@@ -32,7 +27,14 @@ class CardFragment: Fragment() {
         }
 
         viewModel.card.observe(viewLifecycleOwner, Observer { card ->
-            binding.cardContent.text = card.toString()
+            binding.cardText.text = card.toString()
+            binding.cardImage.contentDescription = card.toString()
+            val resId = resources.getIdentifier(
+                card.getImageResourceString(),
+                "drawable",
+                activity?.packageName
+            )
+            binding.cardImage.setImageResource(resId)
         })
 
         return binding.root
