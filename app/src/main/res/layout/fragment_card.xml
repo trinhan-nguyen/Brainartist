@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardBackgroundColor="?attr/colorPrimary"
                 app:cardCornerRadius="@dimen/card_corner_radius">
 
                 <ImageView
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_large"
             android:gravity="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textAppearance="?attr/textAppearanceHeadline5"
             app:layout_constraintBottom_toTopOf="@id/next_button"
             tools:text="@string/app_name" />
