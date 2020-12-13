@@ -3,11 +3,11 @@
         <item name="titleTextColor">@color/colorPrimary</item>
     </style>
 
-    <style name="Theme.Brainartist" parent="Theme.Brainartist.Base">
+    <style name="Theme.Brainartist" parent="Base.Theme.Brainartist">
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
-    <style name="Theme.Brainartist.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.Brainartist" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="toolbarStyle">@style/Widget.Brainartist.Toolbar</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
