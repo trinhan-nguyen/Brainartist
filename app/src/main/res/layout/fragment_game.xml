@@ -13,7 +13,8 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/app_name"
-            android:textAppearance="?attr/textAppearanceHeadline4" />
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textColor="?attr/colorPrimary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/next_button"
