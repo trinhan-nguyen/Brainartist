@@ -1,11 +1,17 @@
 <resources>
+    <style name="Widget.Brainartist.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextColor">@color/colorPrimary</item>
+    </style>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
-        <!-- Customize your theme here. -->
+    <style name="Theme.Brainartist" parent="Base.Theme.Brainartist">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Base.Theme.Brainartist" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.Brainartist.Toolbar</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>
-
 </resources>

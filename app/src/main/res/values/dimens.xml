@@ -7,9 +7,6 @@
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_extra_large">64dp</dimen>
 
-    <!--    icons and images size-->
-    <dimen name="home_game_card_height">260dp</dimen>
-
     <!--    playing card-->
     <dimen name="card_corner_radius">16dp</dimen>
 </resources>
