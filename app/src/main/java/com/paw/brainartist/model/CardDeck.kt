@@ -1,4 +1,4 @@
-package com.paw.brainartist.models
+package com.paw.brainartist.model
 
 import kotlin.random.Random
 
@@ -16,14 +16,11 @@ class CardDeck(shuffled: Boolean = false, private var currentIndex: Int = 0) {
 
     fun getCurrentCard() = deck[currentIndex]
 
-    fun nextCard(): Boolean {
-        currentIndex++
-        if (currentIndex == deck.size) {
-            currentIndex--
-            return false
-        }
-        return true
+    fun nextCard() {
+        if (!isLastCard()) currentIndex++
     }
+
+    fun isLastCard(): Boolean = deck.lastIndex <= currentIndex
 
     fun shuffle() {
         for (index in deck.indices) {

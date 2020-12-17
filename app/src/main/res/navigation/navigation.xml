@@ -23,5 +23,17 @@
     <fragment
         android:id="@+id/cardFragment"
         android:name="com.paw.brainartist.view.card.CardFragment"
-        android:label="CardFragment" />
+        android:label="CardFragment" >
+        <action
+            android:id="@+id/action_cardFragment_to_quizSettingsFragment"
+            app:destination="@id/quizSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizSettingsFragment"
+        android:name="com.paw.brainartist.view.quiz.QuizSettingsFragment"
+        android:label="QuizSettingsFragment" >
+        <action
+            android:id="@+id/action_quizSettingsFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
 </navigation>

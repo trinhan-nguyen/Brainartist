@@ -1,4 +1,4 @@
-package com.paw.brainartist.models
+package com.paw.brainartist.model
 
 import java.util.*
 
