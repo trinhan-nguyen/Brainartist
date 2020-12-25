@@ -47,6 +47,10 @@ class CardFragment: Fragment() {
             }
         })
 
+        viewModel.remainingTime.observe(viewLifecycleOwner, Observer { remainingTime ->
+            binding.timerText.text = remainingTime
+        })
+
         return binding.root
     }
 }
